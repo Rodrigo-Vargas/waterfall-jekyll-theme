@@ -5,24 +5,36 @@ const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: {
-    styles: './scss/styles.css',
-  },
-  output: {
-    path: path.resolve(__dirname, '../assets'),
-    filename: '[name].bundle.js',
-  },
-  module: {
-    rules: [
-      {test: /\.css$/,
-       use: [MiniCssExtractPlugin.loader,'css-loader']
-      }
-    ]
-  },
-  plugins: [
-    new MiniCssExtractPlugin({filename: '[name].css'}),
-    new FixStyleOnlyEntriesPlugin(),
-    new OptimizeCSSAssetsPlugin({})
-  ]
+   mode: 'development',
+   entry: {
+      styles: './scss/styles.css',
+   },
+   output: {
+      path: path.resolve(__dirname, '../assets'),
+      filename: '[name].bundle.js',
+   },
+   module: {
+      rules: [
+         {
+            test: /\.css$/,
+            use: [
+               MiniCssExtractPlugin.loader,
+               'css-loader',
+               {
+                  loader: 'postcss-loader',
+                  options: {
+                     postcssOptions: {
+                        config: path.resolve(__dirname, 'postcss.config.js'),
+                     },
+                  },
+               },
+            ]
+         }
+      ]
+   },
+   plugins: [
+      new MiniCssExtractPlugin({ filename: '[name].css' }),
+      new FixStyleOnlyEntriesPlugin(),
+      new OptimizeCSSAssetsPlugin({})
+   ]
 }
