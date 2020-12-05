@@ -1,1 +1,19 @@
 title: Waterfall Theme
+
+# Uncomment the section below to add items on your top navigation
+# header_items:
+#   - About:
+#     title: About
+#     href: "#about"
+#   - Work:
+#     title: Work
+#     href: "#work"
+#   - contact.md
+#   - Resume:
+#     title: Resume
+#     href: https://drive.google.com
+#     featured: true
+
+waterfall:
+  social_links:
+    github: jekyll
