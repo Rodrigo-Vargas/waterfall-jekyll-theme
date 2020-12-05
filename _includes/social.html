@@ -1,0 +1,21 @@
+{%- assign social = site.waterfall.social_links -%}
+<div class="social-media fixed bottom-0 h-screen-1/2">
+   <div class="relative h-full">
+      <a href="" class="text-primary-700 text-lg block bg-gray-50 p-3">
+         {%- include svg/envelope.svg -%}
+      </a>
+
+      {%- if social.github -%}
+      <a href="https://github.com/{{ social.github | cgi_escape | escape }}" target="_blank" class="text-primary-700 text-lg block bg-gray-50 p-3">
+         {%- include svg/github.svg -%}
+      </a>
+      {%- endif -%}
+
+      <a href="" class="text-primary-700 text-lg block bg-gray-50 p-3">
+         {%- include svg/linkedin.svg -%}
+      </a>
+
+      <div class="vertical-line h-full absolute top-0 bottom-0 bg-primary-700 -z-10"
+         style="width: 2px; left: calc(50% - 1px);"></div>
+   </div>
+</div>
