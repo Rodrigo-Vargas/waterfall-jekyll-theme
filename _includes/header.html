@@ -1,0 +1,40 @@
+<header class="py-5 border-b border-gray-200">
+   <div class="container mx-auto">
+      <div class="flex items-center">
+
+         <div class="w-1/4">
+            <div class="logo hexagon relative">
+               <span class="text-primary-700 absolute text-center w-full h-full z-10 flex items-center justify-center">RV</span>
+            </div>
+         </div>
+
+         <div class="nav w-3/4">
+            <ul class="flex flex-row justify-end items-center">
+               {%- for item in site.header_items -%}
+                  {%- if item.title -%}
+                     {%- assign title = item.title | escape -%}
+                     {%- assign href = item.href | escape -%}
+                     
+                     {%- if item.featured -%}
+                        {%- assign cssClass = 'btn btn-primary inline-block' -%}
+                     {%- endif -%}
+
+                  {%- else -%}
+                     {%- assign page = site.pages | where: "path", item | first -%}
+                     {%- assign title = page.title | escape -%}
+                     {%- assign href = page.url | relative_url -%}
+                  {%- endif -%}
+   
+                  <li class="pr-10">
+                     <a class="nav-link {{ cssClass }}" href="{{ href }}">
+                        <!-- <span class="text-primary-700">{{ forloop.index }}.</span> -->
+                        <span class="text-gray-500">{{ title }}</span>
+                     </a>
+                  </li>
+   
+               {%- endfor -%}
+            </ul>
+         </div>
+      </div> 
+   </div>     
+</header>
