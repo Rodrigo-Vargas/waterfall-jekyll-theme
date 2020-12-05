@@ -1,13 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}</title>
 
-    <link rel="stylesheet" href="/assets/styles.css">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>{{ site.title }}</title>
+
+   <link rel="stylesheet" href="/assets/styles.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
-    {{ content }}
+
+<body class="bg-gray-50">
+   {%- include header.html -%}
+
+   <main class="container mx-auto">
+      <div class="page-hero">
+         <h1 class="text-primary-700 text-4xl pt-40 mb-10">{{ site.waterfall.author.name }}</h1>
+
+         <p class="my-5 text-gray-500 mb-24 w-1/2">{{ site.waterfall.author.description }}</p>
+
+         <a class="btn btn-large bg-primary-700 py-4 px-8 text-white rounded-lg my-5" href="#">Say Hello!</a>
+      </div>
+
+      {{ content }}
+   </main>
+
+   {%- include social.html -%}
 </body>
+
 </html>

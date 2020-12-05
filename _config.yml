@@ -15,5 +15,11 @@ title: Waterfall Theme
 #     featured: true
 
 waterfall:
+  author:
+    name: John Doe
+    description: Write a great description about you here
+
   social_links:
-    github: jekyll
+    github: jekyll    
+    linkedin: jekyll
+    email: jekyll@jekyll.io
