@@ -1,0 +1,39 @@
+<div id="experience" class="h-screen">
+   <h2 class="text-primary-700 mb-10 text-2xl">Where I've Worked</h2>
+
+   <div class="flex flex-wrap">
+      <div class="w-1/4">
+         <div class="nav flex flex-col nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            {% for experience in site.experiences %}
+            <a class="px-4 py-2 text-gray-400 nav-link" data-toggle="pill" href="#v-pills-{{ experience.slug }}"
+               aria-controls="v-pills-settings" aria-selected="false">{{ experience.company.name }}</a>
+            {% endfor %}
+         </div>
+      </div>
+
+      <div class="w-3/4">
+         <div class="tab-content experience" id="v-pills-tabContent">
+            <div class="px-3 tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+               Tab 2</div>
+            <div class="px-3 tab-pane fade" id="v-pills-messages" role="tabpanel"
+               aria-labelledby="v-pills-messages-tab">.Tab 3</div>
+            <div class="px-3 tab-pane fade" id="v-pills-settings" role="tabpanel"
+               aria-labelledby="v-pills-settings-tab">Tab 4</div>
+            {% for experience in site.experiences %}
+            <div class="px-3 tab-pane fade show" id="v-pills-{{ experience.slug }}" role="tabpanel"
+               aria-labelledby="v-pills-home-tab">
+               <div class="mb-2 text-xl">
+                  <span>{{ experience.title }}</span>
+                  <span class="text-primary-700">@</span>
+                  <a class="text-primary-700" href="{{ experience.company.website }}"
+                     target="_blank">{{ experience.company.name }}</a>
+               </div>
+               <span class="block text-gray-300 mb-5 text-sm">{{ experience.period }}</span>
+
+               {{ experience.content }}
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</div>
