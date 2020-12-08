@@ -1,15 +1,17 @@
-<header class="py-5 border-b border-gray-200">
+<header class="py-5 border-b border-gray-200 fixed w-full bg-gray-50">
    <div class="container mx-auto">
       <div class="flex items-center">
 
-         <div class="w-1/4">
+         <div class="w-3/4 md:w-1/4">
             <div class="logo hexagon relative">
-               <span class="text-primary-700 absolute text-center w-full h-full z-10 flex items-center justify-center">RV</span>
+               <a href="/">
+                  <span class="text-primary-700 absolute text-center w-full h-full z-10 flex items-center justify-center">RV</span>
+               </a>
             </div>
          </div>
 
-         <div class="nav w-3/4">
-            <ul class="flex flex-row justify-end items-center">
+         <div class="nav w-64 md:w-3/4 fixed md:static -right-64 transition-all h-full top-0 bg-gray-50 flex flex-col md:flex-row items-center text-center justify-center md:justify-end">
+            <ul class="flex flex-col md:flex-row items-center justify-end">
                {%- for item in site.header_items -%}
                   {%- if item.title -%}
                      {%- assign title = item.title | escape -%}
@@ -25,16 +27,19 @@
                      {%- assign href = page.url | relative_url -%}
                   {%- endif -%}
    
-                  <li class="pr-10">
+                  <li class="pl-5">
                      <a class="nav-link {{ cssClass }}" href="{{ href }}">
                         <!-- <span class="text-primary-700">{{ forloop.index }}.</span> -->
                         <span class="text-gray-500">{{ title }}</span>
                      </a>
-                  </li>
-   
+                  </li>   
                {%- endfor -%}
             </ul>
          </div>
+
+         <a class="w-1/4 md:hidden text-3xl text-primary-700 z-10 text-right" nav-toggler>
+            {%- include svg/bars.svg -%}
+         </a>
       </div> 
    </div>     
 </header>
