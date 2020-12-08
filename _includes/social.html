@@ -3,7 +3,7 @@
    <div class="relative h-full">
       
       {%- if social.email -%}
-         <a href="mailto{{ social.email | cgi_escape | escape }}" class="text-primary-700 text-lg block bg-gray-50 p-3">
+         <a href="mailto:{{ social.email | cgi_escape | escape }}" class="text-primary-700 text-lg block bg-gray-50 p-3">
             {%- include svg/envelope.svg -%}
          </a>
       {%- endif -%}
