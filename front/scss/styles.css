@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.social-media {
-   left: 2.5rem;
-}
-
-
 svg:not(:root).svg-inline--fa {
    overflow: visible
 }
@@ -60,7 +55,6 @@ svg:not(:root).svg-inline--fa {
    @apply rounded-lg px-5 py-2
 }
 
-
 .btn-primary span {
    @apply text-white
 }
@@ -95,12 +89,24 @@ p {
    color: var(--primary-700);
 }
 
-.experience ul {
-   @apply text-gray-500 list-disc pl-3
+.experience {
+   ul {
+      @apply text-gray-500 list-disc pl-3
+   }
+
+   li {
+      @apply mb-3
+   }
 }
 
-.experience li {
-   @apply mb-3
+.btn-primary {
+   @apply bg-primary-600
+}
+
+.nav-opened {
+   .nav {
+      right: 0;
+   }
 }
 
 body {
@@ -125,4 +131,8 @@ body {
    --gray-700: #374151;
    --gray-800: #1f2937;
    --gray-900: #111827;
+}
+
+.transition-all {
+   transition: all 0.5s !important;
 }

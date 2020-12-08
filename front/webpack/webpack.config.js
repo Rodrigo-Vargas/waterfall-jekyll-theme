@@ -3,6 +3,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const loaders = require('./loaders');
 const webpack = require('webpack');
@@ -27,6 +28,11 @@ module.exports = {
       new webpack.ProgressPlugin(),
       new MiniCssExtractPlugin({ filename: '[name].css' }),
       new FixStyleOnlyEntriesPlugin(),
+      new StyleLintPlugin({
+         configFile: path.resolve(__dirname, 'stylelint.config.js'),
+         context: path.resolve(__dirname, '../src/css'),
+         files: '**/*.css',
+       })
       // new OptimizeCSSAssetsPlugin({}),
    ]
 }
