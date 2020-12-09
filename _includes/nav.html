@@ -1,0 +1,23 @@
+{%- for item in site.header_items -%}
+   {%- assign cssClass = '' -%}
+   
+   {%- if item.title -%}
+      {%- assign title = item.title | escape -%}
+      {%- assign href = item.href | escape -%}
+      
+      {%- if item.featured -%}
+         {%- assign cssClass = 'btn btn-primary inline-block' -%}
+      {%- endif -%}   
+   {%- else -%}
+      {%- assign page = site.pages | where: "path", item | first -%}
+      {%- assign title = page.title | escape -%}
+      {%- assign href = page.url | relative_url -%}
+   {%- endif -%}
+
+   <li class="pl-5">
+      <a class="nav-link {{ cssClass }}" href="{{ href }}">
+         <!-- <span class="text-primary-700">{{ forloop.index }}.</span> -->
+         <span class="text-gray-500">{{ title }}</span>
+      </a>
+   </li>   
+{%- endfor -%}

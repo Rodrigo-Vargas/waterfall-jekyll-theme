@@ -104,8 +104,12 @@ p {
 }
 
 .nav-opened {
-   .nav {
+   aside {
       right: 0;
+   }
+
+   .overlay {
+      display: block;
    }
 }
 

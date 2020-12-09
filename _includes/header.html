@@ -1,45 +1,32 @@
-<header class="py-5 border-b border-gray-200 fixed w-full bg-gray-50">
-   <div class="container mx-auto">
-      <div class="flex items-center">
-
-         <div class="w-3/4 md:w-1/4">
-            <div class="logo hexagon relative">
-               <a href="/">
-                  <span class="text-primary-700 absolute text-center w-full h-full z-10 flex items-center justify-center">RV</span>
-               </a>
-            </div>
-         </div>
-
-         <div class="nav w-64 md:w-3/4 fixed md:static -right-64 transition-all h-full top-0 bg-gray-50 flex flex-col md:flex-row items-center text-center justify-center md:justify-end">
-            <ul class="flex flex-col md:flex-row items-center justify-end">
-               {%- for item in site.header_items -%}
-                  {%- if item.title -%}
-                     {%- assign title = item.title | escape -%}
-                     {%- assign href = item.href | escape -%}
-                     
-                     {%- if item.featured -%}
-                        {%- assign cssClass = 'btn btn-primary inline-block' -%}
-                     {%- endif -%}
-
-                  {%- else -%}
-                     {%- assign page = site.pages | where: "path", item | first -%}
-                     {%- assign title = page.title | escape -%}
-                     {%- assign href = page.url | relative_url -%}
-                  {%- endif -%}
+<header class="z-10">
+   <div class="py-5 border-b border-gray-200 fixed w-full bg-gray-50">
+      <div class="container mx-auto">
+         <div class="flex items-center">
    
-                  <li class="pl-5">
-                     <a class="nav-link {{ cssClass }}" href="{{ href }}">
-                        <!-- <span class="text-primary-700">{{ forloop.index }}.</span> -->
-                        <span class="text-gray-500">{{ title }}</span>
-                     </a>
-                  </li>   
-               {%- endfor -%}
-            </ul>
-         </div>
+            <div class="w-3/4 md:w-1/4">
+               <div class="logo hexagon relative">
+                  <a href="/">
+                     <span class="text-primary-700 absolute text-center w-full h-full z-10 flex items-center justify-center">RV</span>
+                  </a>
+               </div>
+            </div>
+   
+            <nav id="top-nav" class="nav w-64 md:w-3/4 hidden md:flex flex-col md:flex-row items-center text-center justify-center md:justify-end z-20">
+               <ul class="flex flex-col md:flex-row items-center justify-end">
+                  {%- include nav.html -%}
+               </ul>
+            </nav>
+         </div> 
+      </div>
+   </div>
 
-         <a class="w-1/4 md:hidden text-3xl text-primary-700 z-10 text-right" nav-toggler>
-            {%- include svg/bars.svg -%}
-         </a>
-      </div> 
-   </div>     
+   <aside class="fixed h-full top-0 w-64 -right-64 bg-gray-50 z-20 flex items-center justify-center transition-all">
+      <ul class="flex flex-col items-center justify-center">
+         {%- include nav.html -%}
+      </ul>
+   </aside>
+
+   <a href="#top-nav" class="w-1/4 md:hidden text-3xl text-primary-700 z-20 text-right fixed top-8 right-8" nav-toggler>
+      {%- include svg/bars.svg -%}
+   </a>
 </header>
