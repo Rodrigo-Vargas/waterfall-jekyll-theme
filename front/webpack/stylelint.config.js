@@ -1,6 +1,5 @@
 module.exports = {
    rules: {
-      "at-rule-no-unknown": true,
       "block-no-empty": true,
       "color-no-invalid-hex": true,
       "comment-no-empty": true,
@@ -8,9 +7,7 @@ module.exports = {
          true,
          {
             ignore: [
-               "consecutive-duplicates-with-different-values",
-               "tailwind",
-               "apply",
+               "consecutive-duplicates-with-different-values"
             ]
          }
       ],

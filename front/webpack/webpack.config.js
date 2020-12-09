@@ -30,7 +30,7 @@ module.exports = {
       new FixStyleOnlyEntriesPlugin(),
       new StyleLintPlugin({
          configFile: path.resolve(__dirname, 'stylelint.config.js'),
-         context: path.resolve(__dirname, '../src/css'),
+         context: path.resolve(__dirname, '../'),
          files: '**/*.css',
        })
       // new OptimizeCSSAssetsPlugin({}),
