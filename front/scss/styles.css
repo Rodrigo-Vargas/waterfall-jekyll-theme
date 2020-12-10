@@ -140,3 +140,15 @@ body {
 .transition-all {
    transition: all 0.5s !important;
 }
+
+.row {
+   @apply flex flex-wrap -mx-3
+}
+
+.col {
+   @apply px-3
+}
+
+.card {
+   @apply h-64
+}

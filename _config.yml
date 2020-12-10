@@ -5,6 +5,8 @@ exclude: ['front']
 collections:
   experiences:
     output: false
+  projects:
+    output: false
 
 # Uncomment the section below to add items on your top navigation
 # header_items:

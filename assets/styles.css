@@ -21496,6 +21496,22 @@ body {
   transition: all 0.5s !important;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem
+}
+
+.col {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem
+}
+
+.card {
+  height: 16rem
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
