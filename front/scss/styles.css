@@ -150,5 +150,5 @@ body {
 }
 
 .card {
-   @apply h-64
+   @apply min-h-64
 }

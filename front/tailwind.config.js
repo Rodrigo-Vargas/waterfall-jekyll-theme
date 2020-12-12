@@ -38,6 +38,9 @@ module.exports = {
          height: {
             'screen-1/2': '50vh'
          },
+         minHeight: {
+            '64': '16rem'
+         },
          zIndex: {
             '-10': '-10'
          }
