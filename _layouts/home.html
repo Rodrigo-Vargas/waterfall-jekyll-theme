@@ -12,10 +12,16 @@
    {% endif %}
 </div>
 
-{%- include experience.html -%}
+{% if site.experiences.size > 0 %}
+   {%- include experience.html -%}
+{% endif %}
 
-{%- include projects.html -%}
+{% if site.projects.size > 0 %}
+   {%- include projects.html -%}
+{% endif %}
 
-{%- include last_posts.html -%}
+{% if site.posts.size > 0 %}
+   {%- include last_posts.html -%}
+{% endif %}
 
 {{ content }}
