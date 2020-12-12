@@ -40,5 +40,8 @@ waterfall:
     linkedin: jekyll
     email: jekyll@jekyll.io
 
+analytics:
+  tracking_id: "UX-12345678"
+
 disqus:
   shortname: jekyll
