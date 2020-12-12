@@ -1,6 +1,6 @@
 module.exports = {
    plugins: {
-      tailwindcss: {},
-      precss: {}
+      precss: {},
+      tailwindcss: {}
    }
 }

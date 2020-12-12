@@ -8,6 +8,17 @@ collections:
   projects:
     output: false
 
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
 # Uncomment the section below to add items on your top navigation
 # header_items:
 #   -
@@ -28,3 +39,6 @@ waterfall:
     github: jekyll    
     linkedin: jekyll
     email: jekyll@jekyll.io
+
+disqus:
+  shortname: jekyll
