@@ -17,4 +17,10 @@
          </div>
       {% endfor %}
    </div>
+
+   {%- if page.posts -%}
+      <div class="flex justify-center my-5">
+         <a href="{{ page.posts.url }}" class="btn border-primary-700 border rounded-md text-center text-primary-700 hover:bg-primary-700 hover:text-white transition-all">{{ page.posts.see_more_label }}</a>
+      </div>
+   {%- endif -%}
 </div>
