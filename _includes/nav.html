@@ -2,13 +2,15 @@
 
 {%- for item in header_items -%}
    {%- assign cssClass = '' -%}
+   {%- assign target = '' -%}
    {%- if item.title -%}
       {%- assign title = item.title | escape -%}
       {%- assign href = item.href | escape -%}
+      {%- assign target = item.target -%}
       
       {%- if item.featured -%}
          {%- assign cssClass = 'btn btn-primary inline-block' -%}
-      {%- endif -%}   
+      {%- endif -%}
    {%- else -%}
       {%- assign page = site.pages | where: "path", item | first -%}
       {%- assign title = page.title | escape -%}
@@ -16,7 +18,7 @@
    {%- endif -%}
 
    <li class="pl-5">
-      <a class="nav-link {{ cssClass }}" href="{{ href }}">
+      <a class="nav-link {{ cssClass }}" href="{{ href }}" target="{{ target }}">
          <span class="text-gray-500">{{ title }}</span>
       </a>
    </li>   
