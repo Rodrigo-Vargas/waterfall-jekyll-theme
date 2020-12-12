@@ -10,14 +10,11 @@ collections:
 
 # Uncomment the section below to add items on your top navigation
 # header_items:
-#   - About:
-#     title: About
-#     href: "#about"
-#   - Work:
-#     title: Work
-#     href: "#work"
+#   -
+#     title: Projects
+#     href: "/projects"
 #   - contact.md
-#   - Resume:
+#   -
 #     title: Resume
 #     href: https://drive.google.com
 #     featured: true

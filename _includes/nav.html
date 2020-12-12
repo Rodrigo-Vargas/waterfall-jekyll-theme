@@ -1,6 +1,7 @@
-{%- for item in site.header_items -%}
+{%- assign header_items = page.header_items | default: site.header_items -%}
+
+{%- for item in header_items -%}
    {%- assign cssClass = '' -%}
-   
    {%- if item.title -%}
       {%- assign title = item.title | escape -%}
       {%- assign href = item.href | escape -%}
@@ -16,7 +17,6 @@
 
    <li class="pl-5">
       <a class="nav-link {{ cssClass }}" href="{{ href }}">
-         <!-- <span class="text-primary-700">{{ forloop.index }}.</span> -->
          <span class="text-gray-500">{{ title }}</span>
       </a>
    </li>   
