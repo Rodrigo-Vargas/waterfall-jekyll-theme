@@ -1,5 +1,8 @@
 title: Waterfall Theme
 
+enable_multi_language: true
+lang: &LANG "pt"
+
 exclude: ['front']
 
 collections:
@@ -17,6 +20,7 @@ defaults:
   - scope:
       path: ""
     values:
+      lang: *LANG
       layout: "default"
 
 # Uncomment the section below to add items on your top navigation
@@ -39,6 +43,9 @@ waterfall:
     github: jekyll    
     linkedin: jekyll
     email: jekyll@jekyll.io
+
+  home:
+    last_posts_items: 4
 
 analytics:
   tracking_id: "UX-12345678"
