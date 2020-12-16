@@ -1,0 +1,11 @@
+.row {
+   @apply flex flex-wrap -mx-3
+}
+
+.col {
+   @apply px-3
+}
+
+.card {
+   @apply min-h-64
+}

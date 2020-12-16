@@ -45,11 +45,16 @@ module.exports = {
          },
          zIndex: {
             '-10': '-10'
+         },
+         scale: {
+            '98': '0.98'
          }
       },
    },
    variants: {
-      extend: {},
+      extend: {
+         margin: ['hover'],
+      }
    },
    plugins: [],
 }

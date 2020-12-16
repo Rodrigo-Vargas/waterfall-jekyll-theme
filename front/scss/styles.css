@@ -6,6 +6,8 @@
 @import "_fa-utilities.css";
 @import "_logo.css";
 @import "_post.css";
+@import "_grid.css";
+@import "_card.css";
 
 .btn {
    @apply rounded-lg px-5 py-2
@@ -91,20 +93,4 @@ body {
    --gray-700: #374151;
    --gray-800: #1f2937;
    --gray-900: #111827;
-}
-
-.transition-all {
-   transition: all 0.5s !important;
-}
-
-.row {
-   @apply flex flex-wrap -mx-3
-}
-
-.col {
-   @apply px-3
-}
-
-.card {
-   @apply min-h-64
 }
