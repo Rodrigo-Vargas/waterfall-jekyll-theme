@@ -11,7 +11,7 @@
    <div class="row">
       {% for project in projects | where: "featured", true %}
          <div class="col w-full sm:w-1/2">
-            <a href="{{ project.permalink }}" class="card featured">
+            <a href="{{ project.url }}" class="card featured">
                <div class="py-5 pt-2">
                   {% for category in project.categories %}
                      <span class="text-gray-300 text-sm pr-5 py-1">{{ category }}</span>

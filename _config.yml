@@ -9,7 +9,7 @@ collections:
   experiences:
     output: false
   projects:
-    output: false
+    output: true
 
 defaults:
   - scope:
@@ -17,6 +17,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
   - scope:
       path: ""
     values:
