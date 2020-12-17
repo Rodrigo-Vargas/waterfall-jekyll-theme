@@ -11,3 +11,11 @@
       @apply font-light tracking-wide leading-9 text-gray-900
    }
 }
+
+.dark {
+   .post {
+      p {
+         @apply font-light tracking-wide leading-9 text-gray-100
+      }
+   }
+}

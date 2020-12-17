@@ -94,3 +94,10 @@ body {
    --gray-800: #1f2937;
    --gray-900: #111827;
 }
+
+.night-mode-transitioning {
+   * {
+      transition-property: all;
+      transition-duration: 500ms;
+   }
+}

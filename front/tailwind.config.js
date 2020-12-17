@@ -4,7 +4,7 @@ module.exports = {
    purge: [
       '../_site/**/*.html'
    ],
-   darkMode: false, // or 'media' or 'class'
+   darkMode: 'class',
    theme: {
       colors: {
          gray: {
@@ -54,6 +54,7 @@ module.exports = {
    variants: {
       extend: {
          margin: ['hover'],
+         display: ['dark']
       }
    },
    plugins: [],

@@ -6,6 +6,16 @@
    @apply p-5 pb-48 bg-gray-50 transform rounded-md relative transition-all duration-300 block mb-3 shadow-lg
 }
 
+.dark {
+   .card.featured {
+      h2 {
+         @apply text-white
+      }
+
+      @apply bg-gray-800
+   }
+}
+
 .card.featured:hover {
    h2 {
       @apply text-white

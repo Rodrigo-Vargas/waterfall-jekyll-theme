@@ -33,3 +33,7 @@
    border-bottom: solid 4.2426px #4338ca;
    border-left: solid 4.2426px #4338ca;
 }
+
+.dark .hexagon {
+   background-color: var(--bg-gray-700);
+}
