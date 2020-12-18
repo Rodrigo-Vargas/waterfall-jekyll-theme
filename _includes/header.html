@@ -1,5 +1,5 @@
-<header class="z-10">
-   <div class="py-5 border-b border-gray-200 dark:border-gray-800 fixed w-full bg-gray-50 dark:bg-gray-900 z-10">
+<header class="z-10 fixed w-full bg-gray-50 transition-all duration-500" data-collapse="scroll" data-collapse-trigger-height="100">
+   <div class="py-5 border-b border-gray-200 dark:border-gray-800   dark:bg-gray-900 z-10">
       <div class="container mx-auto">
          <div class="flex items-center">
    
@@ -20,13 +20,13 @@
       </div>
    </div>
 
-   <aside class="fixed h-full top-0 w-64 -right-64 bg-gray-50 z-20 flex items-center justify-center transition-all">
-      <ul class="flex flex-col items-center justify-center">
-         {%- include nav.html -%}
-      </ul>
-   </aside>
-
    <a href="#top-nav" class="w-1/4 md:hidden text-3xl text-primary-700 z-20 text-right fixed top-8 right-8" nav-toggler>
       {%- include svg/bars.svg -%}
    </a>
 </header>
+
+<aside class="fixed h-full top-0 w-64 -right-64 bg-gray-50 z-20 flex items-center justify-center transition-all">
+   <ul class="flex flex-col items-center justify-center">
+      {%- include nav.html -%}
+   </ul>
+</aside>

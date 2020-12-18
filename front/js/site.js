@@ -6,3 +6,6 @@ pills();
 
 import nightMode from './night-mode';
 nightMode();
+
+import collapse from './collapse';
+collapse();
