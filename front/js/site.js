@@ -9,3 +9,6 @@ nightMode();
 
 import collapse from './collapse';
 collapse();
+
+import anchorTransition from './anchor-transition';
+anchorTransition();

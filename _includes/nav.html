@@ -7,10 +7,20 @@
 {%- for item in header_items -%}
    {%- assign cssClass = '' -%}
    {%- assign target = '' -%}
+   {%- assign anchorTransition = '' -%}
+
    {%- if item.title -%}
       {%- assign title = item.title | escape -%}
       {%- assign href = item.href | escape -%}
       {%- assign target = item.target -%}
+
+      {%- assign aux = href | split: "#" -%}
+
+      {%- if aux.size == 2 -%}
+         {%- assign anchorTransition = "data-anchor-transition" -%}
+      {%- else -%}
+         {%- assign anchorTransition = "" -%}
+      {%- endif -%}
       
       {%- if item.featured -%}
          {%- assign cssClass = 'btn btn-primary inline-block' -%}
@@ -22,7 +32,7 @@
    {%- endif -%}
 
    <li class="pl-5">
-      <a class="nav-link {{ cssClass }}" href="{{ href }}" target="{{ target }}">
+      <a class="nav-link block {{ cssClass }}" href="{{ href }}" target="{{ target }}" {{anchorTransition}}>
          <span class="text-gray-500">{{ title }}</span>
       </a>
    </li>   

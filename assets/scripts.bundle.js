@@ -10,6 +10,20 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./js/anchor-transition.js":
+/*!*********************************!*\
+  !*** ./js/anchor-transition.js ***!
+  \*********************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar AnchorTransition = /*#__PURE__*/function () {\n  function AnchorTransition() {\n    _classCallCheck(this, AnchorTransition);\n\n    this.init();\n  }\n\n  _createClass(AnchorTransition, [{\n    key: \"init\",\n    value: function init() {\n      var anchors = document.querySelectorAll('[data-anchor-transition');\n      anchors.forEach(function (anchor) {\n        anchor.addEventListener('click', function (event) {\n          event.preventDefault();\n          var target = event.target;\n\n          while (target) {\n            if (target instanceof HTMLAnchorElement) {\n              break;\n            }\n\n            target = target.parentNode;\n          }\n\n          var elementSelector = target.getAttribute('href');\n          var element = document.querySelector(elementSelector);\n          if (!element) return false;\n          window.scroll({\n            top: element.offsetTop,\n            left: 0,\n            behavior: 'smooth'\n          });\n          return false;\n        });\n      });\n    }\n  }]);\n\n  return AnchorTransition;\n}();\n\nvar AnchorTransitionInit = function AnchorTransitionInit() {\n  return new AnchorTransition();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AnchorTransitionInit);\n\n//# sourceURL=webpack:///./js/anchor-transition.js?");
+
+/***/ }),
+
 /***/ "./js/collapse.js":
 /*!************************!*\
   !*** ./js/collapse.js ***!
@@ -75,7 +89,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav_collapse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav-collapse */ \"./js/nav-collapse.js\");\n/* harmony import */ var _pills__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pills */ \"./js/pills.js\");\n/* harmony import */ var _night_mode__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./night-mode */ \"./js/night-mode.js\");\n/* harmony import */ var _collapse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./collapse */ \"./js/collapse.js\");\n\n(0,_nav_collapse__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n(0,_pills__WEBPACK_IMPORTED_MODULE_1__.default)();\n\n(0,_night_mode__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n(0,_collapse__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n//# sourceURL=webpack:///./js/site.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav_collapse__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav-collapse */ \"./js/nav-collapse.js\");\n/* harmony import */ var _pills__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pills */ \"./js/pills.js\");\n/* harmony import */ var _night_mode__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./night-mode */ \"./js/night-mode.js\");\n/* harmony import */ var _collapse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./collapse */ \"./js/collapse.js\");\n/* harmony import */ var _anchor_transition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./anchor-transition */ \"./js/anchor-transition.js\");\n\n(0,_nav_collapse__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n(0,_pills__WEBPACK_IMPORTED_MODULE_1__.default)();\n\n(0,_night_mode__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n(0,_collapse__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n(0,_anchor_transition__WEBPACK_IMPORTED_MODULE_4__.default)();\n\n//# sourceURL=webpack:///./js/site.js?");
 
 /***/ })
 
