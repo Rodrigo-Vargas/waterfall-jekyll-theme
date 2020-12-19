@@ -1,6 +1,5 @@
 title: Waterfall Theme
 
-enable_multi_language: true
 lang: &LANG "pt"
 
 exclude: ['front']
@@ -30,14 +29,22 @@ defaults:
 
 # Uncomment the section below to add items on your top navigation
 # header_items:
-#   -
-#     title: Projects
-#     href: "/projects"
-#   - contact.md
-#   -
-#     title: Resume
-#     href: https://drive.google.com
-#     featured: true
+#   *LANG:
+#     -
+#       title: Item 1
+#       href: "/item-1"
+#     -
+#       title: Resume
+#       href: https://drive.google.com
+#       featured: true
+#   en:
+#     -
+#       title: Projects
+#       href: "/projects"
+#     -
+#       title: Resume
+#       href: https://drive.google.com
+#       featured: true
 
 waterfall:
   author:

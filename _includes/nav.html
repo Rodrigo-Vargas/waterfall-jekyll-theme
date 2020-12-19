@@ -1,4 +1,8 @@
-{%- assign header_items = page.header_items | default: site.header_items -%}
+{%- assign header_items = site.header_items[page.lang] | default: site.header_items[site.lang ] -%}
+
+{%- if page.header_items -%}
+   {%- assign header_items = page.header_items -%}
+{%- endif -%}
 
 {%- for item in header_items -%}
    {%- assign cssClass = '' -%}

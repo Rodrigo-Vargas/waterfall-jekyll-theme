@@ -1,6 +1,6 @@
 {%- assign projects = site.projects -%}
 
-{%- if site.enable_multi_language == true && page.lang != null -%}
+{%- if page.lang != null -%}
    {%- assign projects = site.projects | where: "lang", page.lang -%}
 {%- endif -%}
 

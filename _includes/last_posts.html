@@ -1,6 +1,6 @@
 {%- assign posts = site.posts -%}
 
-{%- if site.enable_multi_language == true && page.lang != null -%}
+{%- if page.lang != null -%}
    {%- assign posts = site.posts | where: "lang", page.lang -%}
 {%- endif -%}
 
