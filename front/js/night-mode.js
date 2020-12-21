@@ -41,7 +41,7 @@ class NightMode {
       const themeOption = localStorage.getItem('theme');
 
       if (!themeOption)
-         return getDefaultThemeOption();
+         return this.getDefaultThemeOption();
       
       return themeOption;
    }
