@@ -9,9 +9,12 @@
    <link rel="stylesheet" href="/assets/styles.css">
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+   {% include analytics_head.html %}
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900">
+   {% include analytics_body.html %}
+
    {%- include header.html -%}
 
    <main class="container mx-auto pt-32">
@@ -24,7 +27,6 @@
 
    <div class="overlay hidden bg-gray-900 opacity-60 absolute top-0 bottom-0 w-full z-0 transition-all"></div>
 
-   {% include analytics.html %}
    <script async src="/assets/scripts.bundle.js"></script>
 </body>
 

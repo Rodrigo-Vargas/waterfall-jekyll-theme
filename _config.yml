@@ -62,5 +62,8 @@ waterfall:
 analytics:
   tracking_id: "UX-12345678"
 
+google_tag_manager:
+  tracking_id: "GTM-123XXXX"
+
 disqus:
   shortname: jekyll
